@@ -2,7 +2,7 @@ require 'socket'
 
 server = TCPServer.new(2345)
 
-  socket = server.accept
+socket = server.accept
 
 loop do
 
@@ -10,8 +10,18 @@ loop do
 
   they_said = socket.gets.chomp
 
-  socket.puts "You said: #{they_said}. Goodbye!"
+  socket.puts "You said: #{they_said}"
+
+  if they_said.to_s != "quit"
+
+  end
+
+  if  they_said.to_s == "quit"
+
+    puts "Goodbye!"
+
+    socket.close
+
+  end
 
 end
-
-  socket.close
