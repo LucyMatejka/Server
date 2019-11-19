@@ -25,3 +25,10 @@ loop do
   end
 
 end
+
+#class NoteList
+#def initialize
+  #notelist = NoteList.new
+#end
+
+def create_note
